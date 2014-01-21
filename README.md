@@ -10,7 +10,7 @@ A simple grayscale filter for use with the
 ## Example Usage
 
 The following example can be run using
-[beefy](https://github.com/chrisdickinson/beefy):
+[beefy](https://github.com/chrisdickinson/beefy) (`beefy example.js`):
 
 ```js
 var media = require('rtc-media');
@@ -22,10 +22,6 @@ media().render(vid = processor(document.body));
 
 // handle draw events on the fake video
 vid.pipeline.add(require('rtc-filter-grayscale'));
-```
-
-```
-beefy example.js
 ```
 
 ## License(s)

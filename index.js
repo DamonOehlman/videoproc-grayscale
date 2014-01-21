@@ -7,13 +7,10 @@
   ## Example Usage
 
   The following example can be run using
-  [beefy](https://github.com/chrisdickinson/beefy):
+  [beefy](https://github.com/chrisdickinson/beefy) (`beefy example.js`):
 
   <<< example.js
 
-  ```
-  beefy example.js
-  ```
 **/
 module.exports = function(imageData) {
   var channels = imageData.data;

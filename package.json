@@ -1,6 +1,6 @@
 {
   "name": "rtc-filter-grayscale",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Grayscale video processing filter for rtc-videoproc",
   "main": "index.js",
   "scripts": {

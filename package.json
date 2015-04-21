@@ -13,8 +13,10 @@
   ],
   "author": "Damon Oehlman <damon.oehlman@gmail.com>",
   "devDependencies": {
-    "rtc-videoproc": "~0.8.1",
-    "rtc-media": "~1.5.1"
+    "attachmediastream": "^1.1.0",
+    "crel": "^2.1.8",
+    "getusermedia": "^1.2.1",
+    "videoproc": "^1.0.0"
   },
   "dependencies": {
     "rtc-media": "^1.5.5",

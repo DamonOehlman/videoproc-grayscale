@@ -1,9 +1,20 @@
-var media = require('rtc-media');
-var processor = require('rtc-videoproc');
+var getUserMedia = require('getusermedia');
+var attachmedia = require('attachmediastream');
+var videoproc = require('videoproc');
+var crel = require('crel');
+var canvas = crel('canvas');
 var vid;
 
-// capture media
-media().render(vid = processor(document.body));
+getUserMedia({ audio: true, video: true }, function(err, stream) {
+  if (err) {
+    return console.error('Could not capture media: ', err);
+  }
 
-// handle draw events on the fake video
-vid.pipeline.add(require('..'));
+  videoproc(attachmedia(stream, null, { muted: true }), canvas, {
+    filters: [
+      require('./')
+    ]
+  });
+});
+
+document.body.appendChild(canvas);

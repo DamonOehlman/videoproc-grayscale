@@ -1,10 +1,11 @@
-# rtc-filter-grayscale
+# videoproc-grayscale
 
 A simple grayscale filter for use with the
-[rtc-videoproc](https://github.com/rtc-io/rtc-videoproc) module.
+[videoproc](https://github.com/DamonOehlman/videoproc) module.
 
 
-[![NPM](https://nodei.co/npm/rtc-filter-grayscale.png)](https://nodei.co/npm/rtc-filter-grayscale/)
+[![NPM](https://nodei.co/npm/videoproc-grayscale.png)](https://nodei.co/npm/videoproc-grayscale/)
+
 
 
 ## Example Usage
@@ -13,31 +14,43 @@ The following example can be run using
 [beefy](https://github.com/chrisdickinson/beefy) (`beefy example.js`):
 
 ```js
-var media = require('rtc-media');
-var processor = require('rtc-videoproc');
+var getUserMedia = require('getusermedia');
+var attachmedia = require('attachmediastream');
+var videoproc = require('videoproc');
+var crel = require('crel');
+var canvas = crel('canvas');
 var vid;
 
-// capture media
-media().render(vid = processor(document.body));
+getUserMedia({ audio: true, video: true }, function(err, stream) {
+  if (err) {
+    return console.error('Could not capture media: ', err);
+  }
 
-// handle draw events on the fake video
-vid.pipeline.add(require('rtc-filter-grayscale'));
+  videoproc(attachmedia(stream, null, { muted: true }), canvas, {
+    filters: [
+      require('videoproc-grayscale/')
+    ]
+  });
+});
+
+document.body.appendChild(canvas);
+
 ```
 
 ## License(s)
 
-### Apache 2.0
+### ISC
 
-Copyright 2014 National ICT Australia Limited (NICTA)
+Copyright (c) 2015, National ICT Australia Limited (NICTA)
 
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
 
-     http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.

@@ -1,8 +1,8 @@
 /**
-  # rtc-filter-grayscale
+  # videoproc-grayscale
 
   A simple grayscale filter for use with the
-  [rtc-videoproc](https://github.com/rtc-io/rtc-videoproc) module.
+  [videoproc](https://github.com/DamonOehlman/videoproc) module.
 
   ## Example Usage
 

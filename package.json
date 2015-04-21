@@ -1,29 +1,32 @@
 {
-  "name": "rtc-filter-grayscale",
+  "name": "videoproc-grayscale",
   "version": "0.1.0",
-  "description": "Grayscale video processing filter for rtc-videoproc",
+  "description": "Grayscale video processing filter for videoproc",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "gendocs": "gendocs > README.md"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/rtc-io/rtc-filter-grayscale.git"
   },
   "keywords": [
     "rtc.io",
     "rtc-videoproc",
     "filter"
   ],
-  "author": "Damon Oehlman <damon.oehlman@nicta.com.au>",
-  "license": "Apache 2.0",
-  "bugs": {
-    "url": "https://github.com/rtc-io/rtc-filter-grayscale/issues"
-  },
-  "homepage": "https://github.com/rtc-io/rtc-filter-grayscale",
+  "author": "Damon Oehlman <damon.oehlman@gmail.com>",
   "devDependencies": {
     "rtc-videoproc": "~0.8.1",
     "rtc-media": "~1.5.1"
-  }
+  },
+  "dependencies": {
+    "rtc-media": "^1.5.5",
+    "rtc-videoproc": "^0.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DamonOehlman/videoproc-grayscale.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DamonOehlman/videoproc-grayscale/issues"
+  },
+  "homepage": "https://github.com/DamonOehlman/videoproc-grayscale"
 }

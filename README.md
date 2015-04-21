@@ -6,7 +6,7 @@ A simple grayscale filter for use with the
 
 [![NPM](https://nodei.co/npm/videoproc-grayscale.png)](https://nodei.co/npm/videoproc-grayscale/)
 
-
+[![bitHound Score](https://www.bithound.io/github/DamonOehlman/videoproc-grayscale/badges/score.svg)](https://www.bithound.io/github/DamonOehlman/videoproc-grayscale) 
 
 ## Example Usage
 
@@ -41,7 +41,7 @@ document.body.appendChild(canvas);
 
 ### ISC
 
-Copyright (c) 2015, National ICT Australia Limited (NICTA)
+Copyright (c) 2015, Damon Oehlman <damon.oehlman@gmail.com>
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above

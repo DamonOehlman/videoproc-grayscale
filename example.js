@@ -12,7 +12,7 @@ getUserMedia({ audio: true, video: true }, function(err, stream) {
 
   videoproc(attachmedia(stream, null, { muted: true }), canvas, {
     filters: [
-      require('./')
+      require('.')
     ]
   });
 });

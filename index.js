@@ -9,7 +9,7 @@
   The following example can be run using
   [beefy](https://github.com/chrisdickinson/beefy) (`beefy example.js`):
 
-  <<< example.js
+  <<< examples/simple.js
 
 **/
 module.exports = function(imageData) {
